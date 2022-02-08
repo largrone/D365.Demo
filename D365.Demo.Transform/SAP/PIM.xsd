@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Item">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PimID" type="xs:string" />
+				<xs:element name="sapSKU" type="xs:unsignedInt" />
+				<xs:element name="materialType" type="xs:string" />
+				<xs:element name="industrySector" type="xs:string" />
+				<xs:element name="baseUoM" type="xs:string" />
+				<xs:element minOccurs="0" name="crmOnly" type="xs:unsignedByte" />
+				<xs:element name="division" type="xs:unsignedByte" />
+				<xs:element name="materialGrp" type="xs:unsignedByte" />
+				<xs:element name="externalMatGrp" type="xs:string" />
+				<xs:element name="generalItemCatGrp" type="xs:string" />
+				<xs:element name="manufacturer" type="xs:string" />
+				<xs:element name="manuPartNum" type="xs:string" />
+				<xs:element name="batchMan" type="xs:string" />
+				<xs:element name="totalShelfLife" type="xs:unsignedByte" />
+				<xs:element name="minRemShelfLife" type="xs:unsignedByte" />
+				<xs:element name="cartonQuantity" type="xs:unsignedByte" />
+				<xs:element name="transGrp" type="xs:unsignedByte" />
+				<xs:element name="expirationDate" />
+				<xs:element name="storagePercantage" type="xs:unsignedByte" />
+				<xs:element name="kolli" type="xs:unsignedByte" />
+				<xs:element name="internalComment" />
+				<xs:element maxOccurs="unbounded" name="PlantData">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="plant" type="xs:unsignedShort" />
+							<xs:element name="checkGrpAvailCheck" type="xs:unsignedByte" />
+							<xs:element name="commodityCode" type="xs:decimal" />
+							<xs:element name="countryOfOrigin" type="xs:string" />
+							<xs:element minOccurs="0" name="defStorLocForEP" type="xs:unsignedShort" />
+							<xs:element name="forecastModel" type="xs:unsignedByte" />
+							<xs:element name="grProcessingTime" type="xs:unsignedByte" />
+							<xs:element name="histPeriods" type="xs:unsignedByte" />
+							<xs:element name="impExpMaterialGrp" type="xs:unsignedByte" />
+							<xs:element name="initialization" type="xs:string" />
+							<xs:element name="initializationPeriod" type="xs:unsignedByte" />
+							<xs:element name="loadingGrp" type="xs:unsignedByte" />
+							<xs:element name="logHandlingGrp" type="xs:string" />
+							<xs:element name="lotSize" type="xs:string" />
+							<xs:element name="mrpController" type="xs:unsignedByte" />
+							<xs:element name="mrpType" type="xs:string" />
+							<xs:element name="minSafetyStock" type="xs:unsignedByte" />
+							<xs:element name="modelSel" />
+							<xs:element name="movingPrice" type="xs:decimal" />
+							<xs:element name="numOfForecastPeriods" type="xs:unsignedByte" />
+							<xs:element name="optimLevel" />
+							<xs:element name="ppcPlanningCal" />
+							<xs:element name="periodInd" type="xs:string" />
+							<xs:element name="planDelTimeInDays" type="xs:unsignedByte" />
+							<xs:element minOccurs="0" name="plantSpecMatStatus" type="xs:unsignedByte" />
+							<xs:element name="postToInspStock" type="xs:string" />
+							<xs:element name="procurementType" type="xs:string" />
+							<xs:element name="purchGrp" type="xs:unsignedByte" />
+							<xs:element name="reorderPoint" type="xs:unsignedByte" />
+							<xs:element name="roundingValue" type="xs:unsignedByte" />
+							<xs:element name="safetyStock" type="xs:unsignedByte" />
+							<xs:element name="schedMarginKeyForFloats" type="xs:unsignedByte" />
+							<xs:element name="serNumProfile" type="xs:string" />
+							<xs:element name="serviceLevel" type="xs:unsignedByte" />
+							<xs:element name="standPrice" type="xs:unsignedByte" />
+							<xs:element name="trackLimit" type="xs:unsignedByte" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" name="SalesData">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="salesOrg" type="xs:unsignedShort" />
+							<xs:element name="dc" type="xs:unsignedByte" />
+							<xs:element name="accountAssignGrp" type="xs:unsignedByte" />
+							<xs:element name="itemCatGrpMat" type="xs:string" />
+							<xs:element name="warranty" type="xs:unsignedByte" />
+							<xs:element minOccurs="0" name="webStatus" type="xs:unsignedByte" />
+							<xs:element name="deliveringPlant" type="xs:unsignedShort" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" name="CountryInformation">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="country" type="xs:string" />
+							<xs:element name="mva" type="xs:unsignedByte" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element maxOccurs="unbounded" name="Texts">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="language" type="xs:string" />
+							<xs:element name="materialDescription" type="xs:string" />
+							<xs:element name="webText1" type="xs:string" />
+							<xs:element name="webText2" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="UnitsOfMeasure">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="denominatorForConv" type="xs:unsignedByte" />
+							<xs:element name="altUOM" type="xs:string" />
+							<xs:element name="numeratorConvToBU" type="xs:unsignedByte" />
+							<xs:element name="baseUoM" type="xs:string" />
+							<xs:element name="ean" type="xs:unsignedLong" />
+							<xs:element name="length" type="xs:decimal" />
+							<xs:element name="width" type="xs:decimal" />
+							<xs:element name="height" type="xs:decimal" />
+							<xs:element name="grossWeight" type="xs:decimal" />
+							<xs:element name="netWeight" type="xs:decimal" />
+							<xs:element name="weightUnit" type="xs:string" />
+							<xs:element name="lowerLevelUoM" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
